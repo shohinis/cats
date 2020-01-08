@@ -4,4 +4,4 @@ function randomCatGenerator(){
     return cats[index];
 }
 
-document.body.innerHTML = "<img src=\"" + randomCatGenerator() + "\">";      
+document.body.innerHTML += "<img src=\"" + randomCatGenerator() + "\">";      
