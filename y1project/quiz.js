@@ -56,7 +56,7 @@ function displayQuiz(){
         output.push("<h3>" + quiz[i].question + "</h3>");
         output.push("<div class=\"answers\">");
         for (j=0; j < 4; j++){
-            output.push("<label class=\"container\">" + quiz[i].choices[j] + "<input type=\"radio\" name=\"q" + i + "\" id=\"" + j + "\"> <span class=\"checkmark\"></span></label>" + "<br>");
+            output.push("<label class=\"container\">" + quiz[i].choices[j] + "<input type=\"radio\" name=\"q" + i + "\" id=\"" + i + j + "\"> <span class=\"checkmark\"></span></label>" + "<br>");
         }   
         output.push("</div>");
     }   
@@ -69,19 +69,21 @@ function showResults(){
     for (i=0; i < quiz.length; i++){
         let userAnswer = "";
         for (j=0; j < 4; j++){
-            if (document.getElementById(""+j).checked){
+            if (document.getElementById(""+i+j).checked){
                 userAnswer = quiz[i].choices[j];
             }
         }
-        console.log("user" + userAnswer);
-        console.log("answer" + quiz[i].choices[quiz[i].answer]);
+        
         if (userAnswer == quiz[i].choices[quiz[i].answer]){
             numCorrect++;
         }
     }
-    resultsContainer.innerHTML = "<h1>You got " + numCorrect + "/10 correct</h1>";
+    resultsContainer.innerHTML = "<h1>You got " + numCorrect + "/10 correct!</h1>";
     if (numCorrect == 10){
         resultsContainer.innerHTML += "<h1>Purrfect!</h1>";
+    }
+    else{
+        resultsContainer.innerHTML += "<h1>You've cat to be kitten me! You can do better than this.</h1>";
     }
 }
 
