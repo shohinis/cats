@@ -1,8 +1,38 @@
 button{
     background-color: azure;
     color: mediumturquoise;
+    border-color: azure;
     font-size: 19px;
+    font-variant: small-caps;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+button:hover{
+  background-color: transparent;
+}
+
+h1{
+  font-variant: small-caps;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #495050;
+}
+
+h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #495050;
+}
+
+h3{
+  font-variant: small-caps;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #495050;
+}
+
+p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #555e5e;
+}
+
 /* The container */
 .container {
     display: block;
@@ -15,6 +45,8 @@ button{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color: #555e5e;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
   /* Hide the browser's default radio button */
@@ -42,7 +74,7 @@ button{
   
   /* When the radio button is checked, add a blue background */
   .container input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: mediumturquoise;
   }
   
   /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -64,5 +96,5 @@ button{
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: white;
+      background: azure;
   }

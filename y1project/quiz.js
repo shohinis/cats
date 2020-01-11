@@ -53,7 +53,7 @@ var quiz = [{
 function displayQuiz(){
     const output = [];
     for (i=0; i < quiz.length; i++){
-        output.push("<h3>" + quiz[i].question + "</h3>");
+        output.push("<h2>" + quiz[i].question + "</h2>");
         output.push("<div class=\"answers\">");
         for (j=0; j < 4; j++){
             output.push("<label class=\"container\">" + quiz[i].choices[j] + "<input type=\"radio\" name=\"q" + i + "\" id=\"" + i + j + "\"> <span class=\"checkmark\"></span></label>" + "<br>");
